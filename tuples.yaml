@@ -1,0 +1,21 @@
+- user: user:anne
+  object: organization:acme
+  relation : member
+- user: organization:acme#member
+  object: group:everyone
+  relation: member
+- user: user:john
+  object: organization:acme
+  relation : admin
+- user: organization:acme
+  object: folder:general
+  relation: organization
+- user: group:everyone#member
+  object: folder:general
+  relation: viewer
+- user: folder:general
+  object: document:welcome
+  relation: parent
+- user: user:peter
+  object: document:welcome
+  relation: viewer

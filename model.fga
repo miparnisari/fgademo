@@ -1,0 +1,24 @@
+model
+  schema 1.1
+
+type user
+
+type organization
+  relations
+    define admin: [user]
+    define billing_manager: [user] or admin
+    define member: [user] or admin or billing_manager
+type group
+  relations
+    define member: [user,organization#member]
+type folder
+  relations
+    define organization: [organization]
+    define owner: [user] or admin from organization
+    define parent: [folder]
+    define viewer: [user,group#member] or owner or viewer from parent
+type document
+  relations
+    define parent: [folder]
+    define owner: [user] or owner from parent
+    define viewer: [user,group#member] or owner or viewer from parent
