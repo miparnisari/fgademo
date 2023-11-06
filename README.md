@@ -26,3 +26,17 @@ Start an OpenFGA server, simulate some traffic, check the metrics and traces.
 ## Cleanup
 
 1. Stop OpenFGA and remove data: `docker-compose down --volumes`
+
+## Resources
+
+- Learn more about OpenFGA: https://openfga.dev / https://openfga.dev/blog.
+
+- Engage with the OpenFGA community in [Discord](https://discord.gg/8naAwJfWN6) or [Github](https://github.com/openfga/community/tree/main).
+
+- Follow us on Twitter: [@openfga](https://twitter.com/openfga)
+
+And please, don't forget to [star our Github Repository](https://github.com/openfga/openfga)!
+
+
+
+
