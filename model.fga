@@ -6,8 +6,7 @@ type user
 type organization
   relations
     define admin: [user]
-    define billing_manager: [user] or admin
-    define member: [user] or admin or billing_manager
+    define member: [user] or admin 
 type group
   relations
     define member: [user,organization#member]
